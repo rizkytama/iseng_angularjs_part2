@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appIseng">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>AngularJs</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<!-- sweetalert --> 
+<link rel="stylesheet" type="text/css" href="assets/sweetalert-master/dist/sweetalert.css">
+<link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans' rel='stylesheet' type='text/css'>
+<script src="assets/js/angular.min.js"></script>
+<script src="assets/js/angular-route.min.js"></script>
+	<style>
+		a ,h1 {
+			font-family:  Lobster;
+		}	
+		#tombol a{
+			font-family:  Lobster;
+			margin: 20px;
+		}	
+		#tombol{
+			padding-top:20px ; 
+			padding-bottom: 20px ; 
+		}
+		#opr{
+			min-height: 269px;
+		}
+		h3{
+			font-family:  Lobster;
+		}
+	</style>
+</head>
+<body>
+	<!-- ///////////////////////////HEADER/////////////////////////// -->
+	<!-- CONTOH TEMPLATING menggunakan custom directive "ELEMENT" -->
+	<header-nya></header-nya>
+   
+   <!-- ///////////////////////////JUDUL/////////////////////////// -->
+   <!-- CONTOH TEMPLATING ng-include -->
+   <div ng-include="'komponen/judul.html'"></div>
+	 
+   <!-- ///////////////////////////CONTENT/////////////////////////// -->
+   <!-- CONTOH route -->
+	<div ng-view></div>
+
+	
+
+	<!-- ///////////////////////////FOOTER/////////////////////////// -->
+	<!-- CONTOH TEMPLATING menggunakan custom directive "ATTRIBUT" -->
+<div footernya ></div>
+	
+<script type ="text/javascript" src="assets/jquery-2.1.4.min.js"></script>
+<!-- sweetalert -->
+<script src="assets/sweetalert-master/dist/sweetalert.min.js"></script>
+<script src="assets/js/materialize.min.js"></script>
+<script src="assets/js/init.js"></script>
+<script src="angular/aplikasi/main_app.js"></script>
+<script src="angular/controller/main_controller.js"></script>
+
+
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $(".button-collapse").sideNav();
+    $('select').material_select();
+    $('.modal-trigger').leanModal({
+          dismissible: true, // Modal can be dismissed by clicking outside of the modal
+          opacity: .5, // Opacity of modal background
+          in_duration: 300, // Transition in duration
+          out_duration: 200, // Transition out duration
+          starting_top: '4%', // Starting top style attribute
+          ending_top: '10%', // Ending top style attribute
+          //ready: function() { alert('Ready'); },  Callback for Modal open
+          //complete: function() { alert('Closed'); }  Callback for Modal close
+        }
+      );
+  })
+
+</script>
+</body>
+</html>
